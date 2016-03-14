@@ -2,7 +2,7 @@
 public class q01{
 	public static void main(String[] args){
 		int num =11;
-		while(true){			
+		while(true){
 		String num_10 = String.valueOf(num);//数値から文字列に変換。
 		String num_2 = Integer.toBinaryString(num);//2進数に変換
 		String num_8 = Integer.toOctalString(num);
@@ -24,15 +24,10 @@ public class q01{
 	}
 }
 
-
 /*
-
 1. オブジェクトの比較
 オブジェクトの比較は、そのオブジェクトの参照が一致しているかを比較するため、同じ値であっても参照が異なる場合には true にはなりません。
-
 文字列の場合.equalsを使えば文字列の値で比較することができる。
-
-
 
 2. StringBuffer
 スレッドセーフな可変の文字列。文字列バッファは String と似ていますが、変更できる点が異なります。
@@ -40,9 +35,5 @@ public class q01{
 
 
 http://log.nissuk.info/2012/03/java.html?m=1
-
 http://www.okapiproject.com/java/java_ref/foundation/manual_06.htm
-
-
-
 */
