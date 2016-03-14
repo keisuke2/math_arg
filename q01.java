@@ -1,82 +1,28 @@
-//http://www1.bbiq.jp/takeharu/java74.html
-
-/*
-public class q01{
-
-
-	public static void main(String[] args){
-		System.out.println("Javaの世界へようこそ");
-	}
-}
-*/
-
-//import java.util.*;
 
 public class q01{
-
-
 	public static void main(String[] args){
-		//System.out.println("Javaの世界へようこそ");
-
-		int num =11;
-
+		int num =13;
 		while(num<35){			
 		String num_s = String.valueOf(num);//数値から文字列に変換
 		StringBuffer bs = new StringBuffer(num_s);
-		StringBuffer sb = bs;//new StringBuffer(num_s);//文字列をStringオブジェクトに変換
-  		sb.reverse();//オブジェクト内の情報を変換する 
-  		//参照しているため上手くいかない。sbはbsオブジェクトを参照しているため、sbの中身を反転させるとbsの値も変換されてしまう。
-  		//元のオブジェクトには影響を与えないような工夫が必要
-
-  		//親クラスを作る 
-  		//子クラスを作る 
-  		//子クラスの値を反転させる
-  		//比較演算する。　同じオブジエクトを参照していることにはならないのか？
-  		if(bs==sb){
+		StringBuffer sb = new StringBuffer(num_s);//StringBufferを使い、reverse（）を使えるようにする。
+		String bs2 = bs.toString();//文字列に変換する。
+		String sb2 = sb.reverse().toString();//反転させ文字列に変換する
+  		if(bs2.equals(sb2)){//文字列同士の比較に使える。
   			System.out.println("文字列の並びを反転しました");
-			System.out.println(num_r);
+			System.out.println(num);
 			break;
-
-  		}
-		/*	
-			if(bs.equals(sb)){//文字列にされた数字と文字列の中身を反転させた数字を比較する
-			System.out.println("文字列の並びを反転しました");
-			System.out.println(num_r);
-			//System.out.println(sb);
-			break;
-			}
-		*/
-			System.out.println(num_r);
-			System.out.println(num_s);
-			num +=2;
-			
-			
-			
-			//System.out.println(sb);
-			//System.out.println("文字列の並びを反転しました");
+  		}			
+			num +=2;			
 		}
 	}
 }
 
- 
-/*
-int num =12321;
-String num_s = String.valueOf(num);//数値から文字列に変換
-StringBuffer bs = new StringBuffer(num_s);
-StringBuffer sb = bs;//文字列をStringオブジェクトに変換
-//StringBuffer sb = new StringBuffer(num_s);//文字列をStringオブジェクトに変換
-//StringBuffer bs = sb;
-  sb.reverse();//オブジェクト内の情報を変換する
 
-  if(bs.equals(sb)){
-  System.out.println("文字列の並びを反転しました");
-  System.out.println(sb);
+//http://log.nissuk.info/2012/03/java.html?m=1
 
-  }
- 
- }
-}
-*/
+//http://www.okapiproject.com/java/java_ref/foundation/manual_06.htm
+
 
 /*
 
