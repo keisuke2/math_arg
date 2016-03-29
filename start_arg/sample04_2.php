@@ -1,6 +1,5 @@
 <?php 
 /*単純選択法のアルゴリズムを用いて並び変えを行う*/
-
 $num=array(12,13,11,14,10);
 //1週目　添字0-4までの最小値を探索する
 $min=$num[0];
@@ -14,7 +13,6 @@ for($i=1;$i<count($num);$i++){
 $w=$num[0];
 $num[0]=$num[$min_i];
 $num[$min_i]=$w;
-
 //2週目 添字1-4内で最小値を調べる
 $min=$num[1];
 for($i=2;$i<count($num);$i++){
@@ -39,7 +37,6 @@ for($i=3;$i<count($num);$i++){
 $w=$num[2];
 $num[2]=$num[$min_i];
 $num[$min_i]=$w;
-
 //４周目 添字3-4内で最小値を調べる
 $min=$num[3];
 for($i=4;$i<count($num);$i++){
@@ -52,7 +49,6 @@ for($i=4;$i<count($num);$i++){
 $w=$num[3];
 $num[3]=$num[$min_i];
 $num[$min_i]=$w;
-
  print_r($num);
  /*出力
  Array
