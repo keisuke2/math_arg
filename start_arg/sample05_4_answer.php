@@ -1,0 +1,14 @@
+<?php
+$array=array(5,3,4,1,2);
+for($k=0;$k<count($array);$k++){
+	for($i=4;$i>$k;$i--){
+		if($array[$i-1]>$array[$i]){
+			//データの入れ替えを行う
+			$w=$array[$i-1];
+			$array[$i-1]=$array[$i];
+			$array[$i]=$w;
+		}
+	}
+}
+print_r($array);
+?>
