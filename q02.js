@@ -20,7 +20,8 @@ for(i =1000; i<10000; i++){//
 				//文字列をぶんかいして、数字の間に+,-,*,/を挿入していく処理
 				val = c.charAt(3)+op[j]+c.charAt(2)+op[k]+c.charAt(1)+op[l]+c.charAt(0);
 				val1 = c.charAt(3)+c.charAt(2)+c.charAt(1)+op[l]+c.charAt(0);
-				console.log(val1);
+				//console.log(val1);
+				console.log(i);
 				if(val.length>4){
 					if(i==eval(val)){//eval関数　演算子を無視してくれる。
 						console.log(val +"="+i);//演算子の値と　その時のi　の値を出力する。
