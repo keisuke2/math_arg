@@ -22,7 +22,7 @@ $val2=$a.$b.$c;
 echo $val2;//2+3
 */
 $op=array("+","-","*","/","");
-for($i=1000;$i<10000;$i++){
+for($i=1000;$i<1009;$i++){
 	$c=sprintf($i);
 	for($j=0;$j<count($op);$j++){
 		for($k=0;$k<count($op);$k++){
@@ -37,18 +37,19 @@ for($i=1000;$i<10000;$i++){
 				//逆の演算結果
 				$val2=$c3.$op[$j].$c2.$op[$k].$c1.$op[$l].$c0;
 				//val２の計算結果がiの値と一致したら表示sる
-
-				eval($val2);
-				//eval関数が使えないようだ。
-				//i=1395の時に
-				if(count($val2)>4){
-					//演算の結果が1の値と同じになった場合出力する
-					if($i==eval($val2)){//1395 == 
+				//演算の計算結果をevalで表現したい
+				//eval($val2);
+				//echo $val;
+				//echo $c3.$op[$j].$c2.$op[$k].$c1.$op[$l].$c0;
+				//echo $c3.$op[$j].$c2;
+				//echo count($val2);
+				if(strlen($val2)>4){//5-7 文字列で連結させているので文字列の長さで演算子が入っているかどうか確認すうr
+					if($i==eval("echo $val2;")){//0で割ることができない　逆ポーランド記法で実装してみる
 						echo $val2;
+						echo "="
+						echo $i;
 					}
-				}
-				
-		
+				}				
 			}		
 		}
 	}
